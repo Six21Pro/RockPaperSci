@@ -14,7 +14,9 @@ namespace RockPaperSci
     {
         public Form2()
         {
+            String a = "er";
             InitializeComponent();
+            label4.Text = a;
         }
     }
 }

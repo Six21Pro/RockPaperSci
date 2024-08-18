@@ -20,28 +20,32 @@ namespace RockPaperSci
             // while (pictureBox1.Image == Properties.Resources._3) { 
             q = rand.Next(1, 4);
             if (q == 1)
-            { q = 'r'; pictureBox1.Image = Properties.Resources.crash; }
-            else if (q == 2) { q = 'p'; pictureBox1.Image = Properties.Resources.news; }
-            else if (q == 3) { q = 's'; pictureBox1.Image = Properties.Resources.sci; }
+            { y = 'r'; pictureBox1.Image = Properties.Resources.crash; }
+            else if (q == 2) { y = 'p'; pictureBox1.Image = Properties.Resources.news; }
+            else if (q == 3) { y = 's'; pictureBox1.Image = Properties.Resources.sci; }
             x = 'r';
 
-            win(x, q);
+            win(x, y);
 
 
             // }
 
+            //Form2 form2 = new Form2();
+            //form2.ShowDialog();
         }
 
-        public void win(int x, int q)
+        public void win(char x, char y)
         {
-            int k = 0;
-            if (x == q) { T++; }//TIE
+            
+            if (x == y) { T++; }//TIE
             else if (x == 'r' && y == 'p') { L++; }
-            else if (x == 'r' && y == 's') { W++; }
+            else if (x == 'r' && y == 's') { W++;
+                label4.Text = W.ToString();
+            }
             else if (x == 'p' && y == 's') { L++; }
-            else if (x == 'p' && y == 'r') { W++; }
+            else if (x == 'p' && y == 'r') { W++; label4.Text = "W.ToString()"; }
             else if (x == 's' && y == 'r') { L++; }
-            else if (x == 's' && y == 'p') { W++; }
+            else if (x == 's' && y == 'p') { W++; label4.Text = W.ToString(); }
         }
 
         public async void countDown()
@@ -69,15 +73,15 @@ namespace RockPaperSci
             // while (pictureBox1.Image == Properties.Resources._3) { 
             q = rand.Next(1, 4);
             if (q == 1)
-            { q = 'r'; pictureBox1.Image = Properties.Resources.crash; }
-            else if (q == 2) { q = 'p'; pictureBox1.Image = Properties.Resources.news; }
-            else if (q == 3) { q = 's'; pictureBox1.Image = Properties.Resources.sci; }
+            { y = 'r'; pictureBox1.Image = Properties.Resources.crash; }
+            else if (q == 2) { y = 'p'; pictureBox1.Image = Properties.Resources.news; }
+            else if (q == 3) { y = 's'; pictureBox1.Image = Properties.Resources.sci; }
             x = 'p';
 
-            win(x, q);
+            win(x, y);
 
 
-            // }
+           
         }
 
         private async void button3_Click(object sender, EventArgs e)
@@ -89,15 +93,14 @@ namespace RockPaperSci
             // while (pictureBox1.Image == Properties.Resources._3) { 
             q = rand.Next(1, 4);
             if (q == 1)
-            { q = 'r'; pictureBox1.Image = Properties.Resources.crash; }
-            else if (q == 2) { q = 'p'; pictureBox1.Image = Properties.Resources.news; }
-            else if (q == 3) { q = 's'; pictureBox1.Image = Properties.Resources.sci; }
+            { y = 'r'; pictureBox1.Image = Properties.Resources.crash; }
+            else if (q == 2) { y = 'p'; pictureBox1.Image = Properties.Resources.news; }
+            else if (q == 3) { y = 's'; pictureBox1.Image = Properties.Resources.sci; }
             x = 's';
 
-            win(x, q);
+            win(x, y);
 
-
-            // }
+           
         }
     }
 
